@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10年体重計 サポート</title>
+<style>
+  :root {
+    --base: #FAF6EE;
+    --primary: #3A6EA5;
+    --accent: #1F3D5C;
+    --text-primary: #1E2530;
+    --text-secondary: #6B7587;
+    --border: #DDE3EC;
+    --surface: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", sans-serif;
+    background: var(--base);
+    color: var(--text-primary);
+    line-height: 1.75;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 28px; margin: 0 0 8px; color: var(--accent); }
+  h2 { font-size: 20px; margin: 40px 0 12px; color: var(--accent); border-left: 4px solid var(--primary); padding-left: 12px; }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--text-primary); }
+  p, li { font-size: 15px; color: var(--text-primary); }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .meta { color: var(--text-secondary); font-size: 13px; }
+  .faq-q { font-weight: 600; margin-top: 20px; color: var(--text-primary); }
+  .faq-a { margin: 4px 0 16px; color: var(--text-primary); }
+  ul { padding-left: 20px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 13px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0 32px;
+  }
+  .credit { margin-top: 12px; font-size: 12px; color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>10年体重計 サポート</h1>
+    <p class="meta">10年・20年単位で体重・体脂肪率・BMI を振り返るためのローカル完結ビュアー</p>
+  </header>
+
+  <div class="card">
+    <p>10年体重計（TenYearWeight）をご利用いただきありがとうございます。<br>
+    このページでは、よくある質問と問い合わせ先をご案内します。</p>
+  </div>
+
+  <h2>よくある質問</h2>
+
+  <p class="faq-q">Q. データはどこに保存されますか？</p>
+  <p class="faq-a">A. すべて iPhone 本体に保存されます。外部サーバーへの送信は一切行いません。</p>
+
+  <p class="faq-q">Q. アカウント登録は必要ですか？</p>
+  <p class="faq-a">A. 必要ありません。アプリをインストールすればすぐに使い始められます。</p>
+
+  <p class="faq-q">Q. データをバックアップしたい</p>
+  <p class="faq-a">A. 本アプリは Apple ヘルスケアの「読み取り専用ビュアー」として動作します。元データはヘルスケアアプリ・他の体重記録アプリ側に存在し、本アプリの手動入力データのみが本アプリのローカル DB に保存されます。手動入力データのバックアップ機能は今後追加予定です。</p>
+
+  <p class="faq-q">Q. 機種変更で引き継ぎたい</p>
+  <p class="faq-a">A. ヘルスケア由来のデータは、新しい iPhone で iCloud のヘルスケア同期が有効なら自動的に引き継がれた後、本アプリで「ヘルスケアと同期」または「ヘルスケア全期間再同期」を実行することで再表示できます。手動入力データは現状端末内ローカル保存のため、引き継ぎ時はインポート機能の追加をお待ちください。</p>
+
+  <p class="faq-q">Q. 写真はどこに保存されますか？</p>
+  <p class="faq-a">A. 本アプリは写真機能を持ちません。</p>
+
+  <p class="faq-q">Q. データを完全に削除したい</p>
+  <p class="faq-a">A. 設定タブの「手動入力データを全削除」で、手動入力分を一括削除できます。ヘルスケア由来のデータは本アプリ内のキャッシュを削除してもヘルスケアアプリ本体のデータには影響しません。アプリをアンインストールすると本アプリ内のローカルキャッシュ・手動入力データはすべて削除されます。</p>
+
+  <p class="faq-q">Q. 通信は発生しますか？</p>
+  <p class="faq-a">A. 発生しません。完全オフラインで動作します。機内モードでも全機能が利用可能です。</p>
+
+  <p class="faq-q">Q. 広告は表示されますか？</p>
+  <p class="faq-a">A. 表示されません。本アプリに広告機能はありません。</p>
+
+  <p class="faq-q">Q. Android 版はありますか？</p>
+  <p class="faq-a">A. 提供予定はありません。本アプリは Apple ヘルスケア (HealthKit) との連携を主機能としているため、iOS 専用です。</p>
+
+  <p class="faq-q">Q. ヘルスケアの古いデータ（2010年など）が反映されません</p>
+  <p class="faq-a">A. 設定タブの「ヘルスケア全期間再同期」をお試しください。差分同期では取りこぼされる古いソースのデータが、全期間の再 fetch で取得できる場合があります。</p>
+
+  <p class="faq-q">Q. 期間プリセットに 50年 / 20年 / 15年 が表示されません</p>
+  <p class="faq-a">A. データ歴に応じて選択肢を絞っています（50年プリセットはデータ歴 20 年以上、20年は 8 年以上、15年は 6 年以上、10年は 4 年以上、5年は 2 年以上のときに表示されます）。インポートが進むと自動的に表示されます。</p>
+
+  <p class="faq-q">Q. グラフが「なめらか」と「カクカク」で違うのはなぜ？</p>
+  <p class="faq-a">A. 設定タブの「グラフ表示 → 線のスタイル」で切り替えできます。「なめらか」は隣接点を Catmull-Rom スプラインで補間した曲線描画、「カクカク」は直線で結ぶ表示です。お好みでお選びください。</p>
+
+  <p class="faq-q">Q. 同じ日に複数記録があるとどう表示されますか？</p>
+  <p class="faq-a">A. 1日に複数のデータがある場合、その日の「最古の時刻のサンプル」を代表値として表示します（朝の体重を標準値とする一般的な慣習に合わせています）。同日に手動入力データがある日は、ヘルスケア由来のデータより手動入力を優先表示します。</p>
+
+  <h2>動作環境</h2>
+  <ul>
+    <li>iOS 16.0 以降</li>
+    <li>iPhone 専用（iPad 専用レイアウトは未対応）</li>
+  </ul>
+
+  <h2>不具合の報告・要望</h2>
+  <p>以下のメールアドレスまでご連絡ください。</p>
+  <div class="card">
+    <p><strong>メール：</strong><a href="mailto:y2.youhei@gmail.com">y2.youhei@gmail.com</a></p>
+  </div>
+  <p>報告時には以下を添えていただけると助かります。</p>
+  <ul>
+    <li>iOS バージョン</li>
+    <li>アプリバージョン（設定タブのステータスセクションに表示）</li>
+    <li>再現手順</li>
+  </ul>
+
+  <h2>プライバシーポリシー</h2>
+  <p><a href="./privacy.html">プライバシーポリシーはこちら</a></p>
+
+  <h2>免責事項</h2>
+  <ul>
+    <li>本アプリは個人開発のパーソナルツールです。</li>
+    <li>本アプリの数値表示は医療的助言・診断ではありません。健康状態の判断は医師・専門家にご相談ください。</li>
+    <li>データ保全はヘルスケア（Apple Health）の iCloud 同期および本アプリの手動入力に依存します。重要データは別途バックアップを推奨します。</li>
+  </ul>
+
+  <footer>
+    <p>&copy; 2026 10年体重計</p>
+    <p class="credit">Special thanks: 開発のアイデア出しに協力してくださった chikinan 氏に感謝します。</p>
+  </footer>
+</main>
+</body>
+</html>
