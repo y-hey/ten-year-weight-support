@@ -59,15 +59,21 @@
     padding: 20px 24px;
     margin: 16px 0;
   }
-  .en { margin-top: 40px; padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+  .lang-nav { font-size: 14px; margin: 0 0 24px; }
+  .lang-nav a { margin-right: 16px; }
+  .lang-section { margin-top: 72px; padding-top: 32px; border-top: 2px solid var(--border); }
 </style>
 </head>
 <body>
 <main>
   <header>
     <h1>プライバシーポリシー</h1>
-    <p class="meta">アプリ名：10年体重計（TenYearWeight） ／ 最終更新日：2026年5月6日 ／ 提供者：y2</p>
+    <p class="meta">アプリ名：10年体重計（TenYearWeight） ／ 最終更新日：2026年10月26日 ／ 提供者：y2</p>
   </header>
+
+  <p class="lang-nav"><a href="#ja">日本語</a><a href="#en">English</a><a href="#zh-Hant">繁體中文</a></p>
+
+  <div id="ja"></div>
 
   <p>本プライバシーポリシーは、10年体重計（以下「本アプリ」）における利用者情報の取扱いについて説明するものです。</p>
 
@@ -87,7 +93,8 @@
     <li>体重・体脂肪率・BMI・身長の測定値（手動入力分、および Apple ヘルスケアから読み取ったデータのローカルキャッシュ）</li>
     <li>身長設定（BMI 計算用）</li>
     <li>目標体重設定（グラフ表示用）</li>
-    <li>表示設定（選択中の期間プリセット・指標タブ・平均窓・線スタイル）</li>
+    <li>表示設定（選択中の期間プリセット・指標タブ・平均窓・線スタイル・1日の代表値・表示言語・体重の単位・日付の基準のタイムゾーンなど）</li>
+    <li>本アプリで削除したヘルスケア・ファイル由来の記録の識別子（次の同期で戻さないため）</li>
     <li>Apple ヘルスケアの最終同期時刻（差分同期用のメタ情報）</li>
   </ul>
   <p>保存先：iOS の Documents ディレクトリ配下（SQLite データベース、および関連ファイル）</p>
@@ -144,8 +151,8 @@
   <h2>8. データの削除</h2>
   <p>利用者は、以下の方法でアプリ内のデータを削除できます。</p>
   <ul>
-    <li>個別記録の削除：入力タブの履歴から削除（手動入力データのみ）</li>
-    <li>手動入力データの一括削除：設定タブの「手動入力データを全削除」</li>
+    <li>個別記録の削除：入力タブの履歴（手動入力データ）、または設定タブの「データ → 日付ごとの記録」（すべての記録）から削除</li>
+    <li>手動入力データの一括削除：設定タブの「データ → 手動入力データを全削除」</li>
     <li>アプリのアンインストール：iOS 標準操作でアプリを削除すると、本アプリ内のローカルキャッシュ・手動入力データはすべて削除されます。Apple ヘルスケア本体のデータには影響しません。</li>
     <li>ヘルスケア側のデータ管理：iOS の「ヘルスケア」アプリの設定 → アプリ → 10年体重計 から、本アプリへの読み取り権限を取り消すことができます。</li>
   </ul>
@@ -162,10 +169,203 @@
     <p><strong>サポートページ：</strong><a href="./index.html">こちら</a></p>
   </div>
 
-  <div class="en">
-    <strong>English Summary</strong><br>
-    This app does not collect, transmit, or share any personal information. All records are stored locally on your device. The app does not use any analytics, advertising, or tracking SDKs. HealthKit access is read-only and used solely to display your long-term weight, body-fat, BMI, and height history; the app never writes back to HealthKit. For details, refer to the Japanese text above. Contact: yowl.dev@gmail.com
-  </div>
+  <section id="en" class="lang-section" lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="meta">App: 10-Year Weight (TenYearWeight) / Last updated: October 26, 2026 / Provider: y2</p>
+
+    <p>This privacy policy explains how 10-Year Weight ("the app") handles user information.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>The app <strong>does not collect any</strong> personal information.</p>
+    <ul>
+      <li>There is no account registration.</li>
+      <li>No data is sent to any server.</li>
+      <li>No analytics tools (such as Google Analytics or Firebase Analytics) are included.</li>
+      <li>No advertising SDKs are included.</li>
+      <li>Crash reports are not sent automatically.</li>
+    </ul>
+
+    <h2>2. Information Stored on Your Device</h2>
+    <p>The following information is stored only on your iPhone. It is never sent to anyone, including the developer.</p>
+    <ul>
+      <li>Weight, body fat percentage, BMI, and height values (manual records, and a local copy of the data read from Apple Health)</li>
+      <li>Height setting (used to calculate BMI)</li>
+      <li>Target weight setting (shown on the graph)</li>
+      <li>Display settings (selected period, metric tab, averaging window, line style, record used per day, display language, weight unit, time zone used for day boundaries, and so on)</li>
+      <li>IDs of records from Health or imported files that you deleted in the app (so that they are not added back at the next sync)</li>
+      <li>The time of the last Apple Health sync (used to sync only new records)</li>
+    </ul>
+    <p>Location: under the iOS Documents directory (an SQLite database and related files)</p>
+
+    <h2>3. Device Permissions</h2>
+    <p>The app uses only the following permission, and only when needed.</p>
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>Purpose</th><th>Required</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Health (HealthKit)</td>
+          <td>Reads weight, body fat percentage, BMI, and height from Health to show how they have changed over 10 years or more. <strong>The app never writes to Health.</strong></td>
+          <td>Optional</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The app <strong>does not use</strong> the following:</p>
+    <ul>
+      <li>Location</li>
+      <li>Microphone</li>
+      <li>Camera</li>
+      <li>Photo library</li>
+      <li>Contacts</li>
+      <li>Calendars</li>
+      <li>Bluetooth</li>
+      <li>Motion sensors</li>
+      <li>Tracking (IDFA)</li>
+      <li>Notifications</li>
+    </ul>
+
+    <h2>4. iCloud Backup</h2>
+    <p>If standard iCloud Backup is turned on in iOS, the app's data (files under the Documents directory) may be backed up to Apple's iCloud servers. This is standard iOS behavior, not a transfer made by the app itself. Data stored in iCloud is handled under Apple's privacy policy.</p>
+
+    <h2>5. Health Data</h2>
+    <p>The app reads weight, body fat percentage, BMI, and height samples from Apple Health (HealthKit) <strong>read-only</strong>, within the scope you allow, and keeps a copy in its local database to show graphs.</p>
+    <ul>
+      <li>The app <strong>never writes</strong> to Health.</li>
+      <li>To sync only new records, the copy keeps past samples. If you delete data in Health, run "Resync all Health data" to apply the change to the app's copy.</li>
+      <li>The copy is never sent outside the app (for example, to an external server).</li>
+    </ul>
+
+    <h2>6. Children's Privacy</h2>
+    <p>The app does not knowingly collect personal information from children. The app's age rating is based on Apple's App Store rating questions.</p>
+
+    <h2>7. Notes Specific to This App</h2>
+    <ul>
+      <li>The numbers shown in this app are not medical advice or a diagnosis. For decisions about your health, treatment, or nutrition, please consult a doctor, dietitian, or other specialist.</li>
+      <li>The values shown in this app are totals and displays of data from Health or your own manual entries, as they are. Their accuracy depends on the source (the measuring device or you).</li>
+      <li>BMI is calculated automatically from your height setting and weight. If a record already includes a BMI value, that value is used.</li>
+    </ul>
+
+    <h2>8. Deleting Data</h2>
+    <p>You can delete data in the app in the following ways.</p>
+    <ul>
+      <li>Delete individual records: from the history in the Input tab (manual records), or from "Data → Records by Date" in the Settings tab (all records)</li>
+      <li>Delete all manual records: "Data → Delete all manual records" in the Settings tab</li>
+      <li>Uninstall the app: deleting the app in iOS removes all of its local data, including manual records. The data in Apple Health is not affected.</li>
+      <li>Managing Health access: in the Health app settings, go to Apps → 10-Year Weight to remove the app's read access.</li>
+    </ul>
+
+    <h2>9. Sharing with Third Parties</h2>
+    <p>Because the app does not collect user information, it does not share any with third parties.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>This privacy policy may be revised when necessary. When it is revised, the last updated date on this page will be changed.</p>
+
+    <h2>11. Contact</h2>
+    <div class="card">
+      <p><strong>Email: </strong><a href="mailto:yowl.dev@gmail.com">yowl.dev@gmail.com</a></p>
+      <p><strong>Support page: </strong><a href="./index.html#en">Open</a></p>
+    </div>
+  </section>
+
+  <section id="zh-Hant" class="lang-section" lang="zh-Hant">
+    <h1>隱私權政策</h1>
+    <p class="meta">App 名稱：10年體重計（TenYearWeight）／ 最後更新日：2026年10月26日 ／ 提供者：y2</p>
+
+    <p>本隱私權政策說明 10年體重計（以下稱「本 App」）如何處理使用者資訊。</p>
+
+    <h2>1. 收集的資訊</h2>
+    <p>本 App <strong>完全不收集</strong>使用者的個人資訊。</p>
+    <ul>
+      <li>沒有帳號註冊</li>
+      <li>不會將資料傳送到伺服器</li>
+      <li>未加入分析工具（例如 Google Analytics、Firebase Analytics）</li>
+      <li>未加入廣告 SDK</li>
+      <li>不會自動傳送當機報告</li>
+    </ul>
+
+    <h2>2. 保存在裝置中的資訊</h2>
+    <p>以下資訊只保存在使用者的 iPhone 中，不會傳送給包含開發者在內的任何第三方。</p>
+    <ul>
+      <li>體重、體脂肪率、BMI、身高的數值（手動輸入的資料，以及從 Apple 健康讀取的資料在本機的副本）</li>
+      <li>身高設定（用於計算 BMI）</li>
+      <li>目標體重設定（用於圖表顯示）</li>
+      <li>顯示設定（選擇中的期間、指標分頁、平均區間、線條樣式、每日代表值、顯示語言、體重單位、判斷日期用的時區等）</li>
+      <li>在本 App 刪除的健康 App 或檔案來源紀錄的識別碼（避免下次同步時再次加入）</li>
+      <li>Apple 健康的最後同步時間（用於只同步新資料）</li>
+    </ul>
+    <p>保存位置：iOS 的 Documents 目錄下（SQLite 資料庫及相關檔案）</p>
+
+    <h2>3. 裝置權限的使用</h2>
+    <p>本 App 只會在需要時使用以下權限。</p>
+    <table>
+      <thead>
+        <tr><th>權限</th><th>用途</th><th>必要</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>健康（HealthKit）</td>
+          <td>為了顯示過去 10 年以上的體重、體脂肪率、BMI 與身高變化，從健康 App 讀取資料。<strong>不會寫入。</strong></td>
+          <td>選用</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>以下權限<strong>不會使用</strong>：</p>
+    <ul>
+      <li>位置</li>
+      <li>麥克風</li>
+      <li>相機</li>
+      <li>照片圖庫</li>
+      <li>聯絡人</li>
+      <li>行事曆</li>
+      <li>藍牙</li>
+      <li>動作感測器</li>
+      <li>追蹤（IDFA）</li>
+      <li>通知</li>
+    </ul>
+
+    <h2>4. iCloud 備份</h2>
+    <p>若 iOS 標準的 iCloud 備份為開啟狀態，本 App 的資料（Documents 目錄下的檔案）可能會備份到 Apple 的 iCloud 伺服器。這是 iOS 的標準行為，並非本 App 自行傳送。保存在 iCloud 的資料依 Apple 的隱私權政策處理。</p>
+
+    <h2>5. 健康資料的處理</h2>
+    <p>本 App 會在使用者允許的範圍內，從 Apple 健康（HealthKit）以<strong>唯讀</strong>方式取得體重、體脂肪率、BMI 與身高的樣本，並為了顯示圖表暫存在本 App 的本機資料庫中。</p>
+    <ul>
+      <li>本 App <strong>完全不會寫入</strong>健康 App。</li>
+      <li>為了只同步新資料，暫存會保留過去樣本的副本。若在健康 App 中刪除了資料，執行「重新同步全部健康資料」即可反映到本 App 的暫存。</li>
+      <li>暫存資料不會傳送到 App 以外的地方（例如外部伺服器）。</li>
+    </ul>
+
+    <h2>6. 兒童隱私</h2>
+    <p>本 App 不會刻意向兒童收集個人資訊。本 App 的年齡分級依照 Apple App Store 的分級問卷設定。</p>
+
+    <h2>7. 本 App 的注意事項</h2>
+    <ul>
+      <li>本 App 顯示的數值並非醫療建議或診斷。關於健康狀況的判斷、治療或營養指導，請諮詢醫師、營養師或專家。</li>
+      <li>本 App 顯示的數值，是將健康 App 或使用者手動輸入的資料直接彙整並顯示的結果。數值的正確性取決於資料來源（測量裝置或使用者本人）。</li>
+      <li>BMI 會依身高設定與體重自動計算。若資料本身含有 BMI，會優先使用該數值。</li>
+    </ul>
+
+    <h2>8. 刪除資料</h2>
+    <p>使用者可以用以下方式刪除 App 內的資料。</p>
+    <ul>
+      <li>刪除個別紀錄：從輸入分頁的紀錄（手動輸入的資料），或設定分頁的「資料 → 依日期查看紀錄」（所有紀錄）刪除</li>
+      <li>一次刪除手動輸入的資料：設定分頁的「資料 → 刪除全部手動輸入資料」</li>
+      <li>刪除 App：以 iOS 標準操作刪除 App 後，App 內的本機資料與手動輸入的資料會全部刪除。不會影響 Apple 健康中的資料。</li>
+      <li>管理健康 App 的權限：在「健康」App 的設定 → App → 10年體重計，可以取消本 App 的讀取權限。</li>
+    </ul>
+
+    <h2>9. 提供給第三方</h2>
+    <p>本 App 不收集使用者資訊，因此也不會提供給第三方。</p>
+
+    <h2>10. 政策的變更</h2>
+    <p>本隱私權政策可能會視需要修訂。修訂時會更新本頁的最後更新日。</p>
+
+    <h2>11. 聯絡方式</h2>
+    <div class="card">
+      <p><strong>電子郵件：</strong><a href="mailto:yowl.dev@gmail.com">yowl.dev@gmail.com</a></p>
+      <p><strong>支援頁面：</strong><a href="./index.html#zh-Hant">開啟</a></p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2026 10年体重計</p>

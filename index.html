@@ -48,6 +48,9 @@
     margin: 16px 0 32px;
   }
   .credit { margin-top: 12px; font-size: 12px; color: var(--text-secondary); }
+  .lang-nav { font-size: 14px; margin: 0 0 24px; }
+  .lang-nav a { margin-right: 16px; }
+  .lang-section { margin-top: 72px; padding-top: 32px; border-top: 2px solid var(--border); }
 </style>
 </head>
 <body>
@@ -56,6 +59,10 @@
     <h1>10年体重計 サポート</h1>
     <p class="meta">10年・20年単位で体重・体脂肪率・BMI を振り返るためのローカル完結ビュアー</p>
   </header>
+
+  <p class="lang-nav"><a href="#ja">日本語</a><a href="#en">English</a><a href="#zh-Hant">繁體中文</a></p>
+
+  <div id="ja"></div>
 
   <div class="card">
     <p>10年体重計（TenYearWeight）をご利用いただきありがとうございます。<br>
@@ -80,7 +87,7 @@
   <p class="faq-a">A. 本アプリは写真機能を持ちません。</p>
 
   <p class="faq-q">Q. データを完全に削除したい</p>
-  <p class="faq-a">A. 設定タブの「手動入力データを全削除」で、手動入力分を一括削除できます。ヘルスケア由来のデータは本アプリ内のキャッシュを削除してもヘルスケアアプリ本体のデータには影響しません。アプリをアンインストールすると本アプリ内のローカルキャッシュ・手動入力データはすべて削除されます。</p>
+  <p class="faq-a">A. 設定タブの「データ → 手動入力データを全削除」で、手動入力分を一括削除できます。「データ → 日付ごとの記録」では、ヘルスケアやファイル由来の記録も含めて 1 件ずつ削除できます。本アプリで記録を削除しても、ヘルスケアアプリ本体のデータには影響しません。本アプリで削除したヘルスケア由来の記録は、差分同期では戻りませんが、全期間再同期とファイルからの取り込みでは戻ります。アプリをアンインストールすると本アプリ内のローカルキャッシュ・手動入力データはすべて削除されます。</p>
 
   <p class="faq-q">Q. 通信は発生しますか？</p>
   <p class="faq-a">A. 発生しません。完全オフラインで動作します。機内モードでも全機能が利用可能です。</p>
@@ -92,16 +99,16 @@
   <p class="faq-a">A. 提供予定はありません。本アプリは Apple ヘルスケア (HealthKit) との連携を主機能としているため、iOS 専用です。</p>
 
   <p class="faq-q">Q. ヘルスケアの古いデータ（2010年など）が反映されません</p>
-  <p class="faq-a">A. 設定タブの「ヘルスケア全期間再同期」をお試しください。差分同期では取りこぼされる古いソースのデータが、全期間の再 fetch で取得できる場合があります。</p>
+  <p class="faq-a">A. 設定タブの「ヘルスケア全期間再同期」をお試しください。差分同期では取りこぼされる古いソースのデータが、全期間の再 fetch で取得できる場合があります。本アプリで削除した記録も、全期間再同期では戻ります。</p>
 
   <p class="faq-q">Q. 期間プリセットに 50年 / 20年 / 15年 が表示されません</p>
   <p class="faq-a">A. データ歴に応じて選択肢を絞っています（50年プリセットはデータ歴 20 年以上、20年は 8 年以上、15年は 6 年以上、10年は 4 年以上、5年は 2 年以上のときに表示されます）。インポートが進むと自動的に表示されます。</p>
 
   <p class="faq-q">Q. グラフが「なめらか」と「カクカク」で違うのはなぜ？</p>
-  <p class="faq-a">A. 設定タブの「グラフ表示 → 線のスタイル」で切り替えできます。「なめらか」は隣接点を Catmull-Rom スプラインで補間した曲線描画、「カクカク」は直線で結ぶ表示です。お好みでお選びください。</p>
+  <p class="faq-a">A. 設定タブの「表示 → 線のスタイル」で切り替えできます。「なめらか」は隣接点を Catmull-Rom スプラインで補間した曲線描画、「カクカク」は直線で結ぶ表示です。お好みでお選びください。</p>
 
   <p class="faq-q">Q. 同じ日に複数記録があるとどう表示されますか？</p>
-  <p class="faq-a">A. 1日に複数のデータがある場合、その日の「最古の時刻のサンプル」を代表値として表示します（朝の体重を標準値とする一般的な慣習に合わせています）。同日に手動入力データがある日は、ヘルスケア由来のデータより手動入力を優先表示します。</p>
+  <p class="faq-a">A. 設定タブの「表示 → 1日の代表値」で、その日の最初・最後・最大・最小のどれを使うかを選べます（既定は「最後」）。日付ごとに使う記録は「データ → 日付ごとの記録」で指定できます。同日に手動入力データがある日は、ヘルスケアやファイル由来のデータより手動入力を優先します。</p>
 
   <h2>動作環境</h2>
   <ul>
@@ -117,7 +124,7 @@
   <p>報告時には以下を添えていただけると助かります。</p>
   <ul>
     <li>iOS バージョン</li>
-    <li>アプリバージョン（設定タブのステータスセクションに表示）</li>
+    <li>アプリバージョン</li>
     <li>再現手順</li>
   </ul>
 
@@ -130,6 +137,164 @@
     <li>本アプリの数値表示は医療的助言・診断ではありません。健康状態の判断は医師・専門家にご相談ください。</li>
     <li>データ保全はヘルスケア（Apple Health）の iCloud 同期および本アプリの手動入力に依存します。重要データは別途バックアップを推奨します。</li>
   </ul>
+
+  <section id="en" class="lang-section" lang="en">
+    <h1>10-Year Weight Support</h1>
+    <p class="meta">A local, offline viewer for looking back on your weight, body fat percentage, and BMI over 10 or 20 years</p>
+
+    <div class="card">
+      <p>Thank you for using 10-Year Weight (TenYearWeight).<br>
+      This page answers common questions and explains how to contact us.</p>
+    </div>
+
+    <h2>FAQ</h2>
+
+    <p class="faq-q">Q. Where is my data stored?</p>
+    <p class="faq-a">A. Everything is stored on your iPhone. Nothing is sent to external servers.</p>
+
+    <p class="faq-q">Q. Do I need an account?</p>
+    <p class="faq-a">A. No. You can start using the app right after installing it.</p>
+
+    <p class="faq-q">Q. I want to back up my data</p>
+    <p class="faq-a">A. The app works as a read-only viewer for Apple Health. Your original data stays in the Health app and other weight apps. Only the records you enter manually are stored in this app's local database. A backup feature for manual records is planned.</p>
+
+    <p class="faq-q">Q. I want to move my data to a new iPhone</p>
+    <p class="faq-a">A. If Health data syncs through iCloud on your new iPhone, run "Sync with Health (new only)" or "Resync all Health data" in the app to show it again. Manual records are currently stored only on the device, so they cannot be moved yet. Please wait for an import feature to be added.</p>
+
+    <p class="faq-q">Q. Where are photos stored?</p>
+    <p class="faq-a">A. The app has no photo features.</p>
+
+    <p class="faq-q">Q. I want to delete my data completely</p>
+    <p class="faq-a">A. In Settings, "Data → Delete all manual records" deletes all manual records at once. In "Data → Records by Date", you can delete records one by one, including those from Health or imported files. Deleting records in this app does not change the data in the Health app. Health records you delete in the app do not come back with a regular sync, but they do come back with "Resync all Health data" or an import from file. Uninstalling the app deletes all of its local data, including manual records.</p>
+
+    <p class="faq-q">Q. Does the app use the internet?</p>
+    <p class="faq-a">A. No. The app works fully offline, and every feature is available in Airplane Mode.</p>
+
+    <p class="faq-q">Q. Does the app show ads?</p>
+    <p class="faq-a">A. No. The app has no advertising.</p>
+
+    <p class="faq-q">Q. Is there an Android version?</p>
+    <p class="faq-a">A. There are no plans for one. The app is built around Apple Health (HealthKit), so it is iOS only.</p>
+
+    <p class="faq-q">Q. Older Health data (such as from 2010) is missing</p>
+    <p class="faq-a">A. Try "Resync all Health data" in Settings. Reading the entire history again may bring in older data that a regular sync misses. Records you deleted in the app also come back with a full resync.</p>
+
+    <p class="faq-q">Q. The 50Y, 20Y, or 15Y period options are not shown</p>
+    <p class="faq-a">A. The options depend on how long your data history is: 50Y appears with 20 or more years of data, 20Y with 8 or more, 15Y with 6 or more, 10Y with 4 or more, and 5Y with 2 or more. They appear automatically as more data is imported.</p>
+
+    <p class="faq-q">Q. What is the difference between "Smooth" and "Straight"?</p>
+    <p class="faq-a">A. You can switch them in Settings under "Display → Line Style". "Smooth" draws a curve through the points (Catmull-Rom spline), and "Straight" connects them with straight lines.</p>
+
+    <p class="faq-q">Q. How are days with several records shown?</p>
+    <p class="faq-a">A. In Settings under "Display → Record Used per Day", choose First, Last, Highest, or Lowest (the default is Last). You can also choose the record for a specific day in "Data → Records by Date". On days with a manual record, the manual record takes priority over data from Health or imported files.</p>
+
+    <h2>Requirements</h2>
+    <ul>
+      <li>iOS 16.0 or later</li>
+      <li>iPhone only (no iPad layout)</li>
+    </ul>
+
+    <h2>Bug Reports and Requests</h2>
+    <p>Please contact us at the email address below.</p>
+    <div class="card">
+      <p><strong>Email: </strong><a href="mailto:yowl.dev@gmail.com">yowl.dev@gmail.com</a></p>
+    </div>
+    <p>It helps if you include the following:</p>
+    <ul>
+      <li>iOS version</li>
+      <li>App version</li>
+      <li>Steps to reproduce</li>
+    </ul>
+
+    <h2>Privacy Policy</h2>
+    <p><a href="./privacy.html#en">Read the privacy policy</a></p>
+
+    <h2>Disclaimer</h2>
+    <ul>
+      <li>This app is a personal tool made by an independent developer.</li>
+      <li>The numbers shown in this app are not medical advice or a diagnosis. Please consult a doctor or specialist about your health.</li>
+      <li>Keeping your data safe depends on Apple Health's iCloud sync and on the records you enter in this app. We recommend backing up important data separately.</li>
+    </ul>
+  </section>
+
+  <section id="zh-Hant" class="lang-section" lang="zh-Hant">
+    <h1>10年體重計 支援</h1>
+    <p class="meta">以 10 年、20 年為單位回顧體重、體脂肪率與 BMI 的離線檢視器，資料只保存在裝置中</p>
+
+    <div class="card">
+      <p>感謝你使用 10年體重計（TenYearWeight）。<br>
+      本頁說明常見問題與聯絡方式。</p>
+    </div>
+
+    <h2>常見問題</h2>
+
+    <p class="faq-q">Q. 資料保存在哪裡？</p>
+    <p class="faq-a">A. 全部保存在 iPhone 中，完全不會傳送到外部伺服器。</p>
+
+    <p class="faq-q">Q. 需要註冊帳號嗎？</p>
+    <p class="faq-a">A. 不需要。安裝 App 後即可開始使用。</p>
+
+    <p class="faq-q">Q. 想備份資料</p>
+    <p class="faq-a">A. 本 App 是 Apple 健康的「唯讀檢視器」。原始資料保存在「健康」App 或其他體重紀錄 App 中，只有在本 App 手動輸入的資料會保存在本 App 的本機資料庫。手動輸入資料的備份功能預計之後加入。</p>
+
+    <p class="faq-q">Q. 想在更換 iPhone 時轉移資料</p>
+    <p class="faq-a">A. 若新的 iPhone 已透過 iCloud 同步健康資料，在本 App 執行「與健康 App 同步（僅新資料）」或「重新同步全部健康資料」即可再次顯示。手動輸入的資料目前只保存在裝置中，尚無法轉移，請等待之後加入匯入功能。</p>
+
+    <p class="faq-q">Q. 照片保存在哪裡？</p>
+    <p class="faq-a">A. 本 App 沒有照片功能。</p>
+
+    <p class="faq-q">Q. 想完全刪除資料</p>
+    <p class="faq-a">A. 在設定的「資料 → 刪除全部手動輸入資料」可以一次刪除所有手動輸入的資料。在「資料 → 依日期查看紀錄」可以逐筆刪除紀錄，包含來自健康 App 或匯入檔案的紀錄。在本 App 刪除紀錄，不會影響「健康」App 中的資料。在本 App 刪除的健康資料，一般同步時不會再次出現，但執行「重新同步全部健康資料」或從檔案匯入時會恢復。刪除本 App 後，App 內的本機資料與手動輸入資料會全部刪除。</p>
+
+    <p class="faq-q">Q. 會使用網路嗎？</p>
+    <p class="faq-a">A. 不會。本 App 完全離線運作，開啟飛航模式時也能使用所有功能。</p>
+
+    <p class="faq-q">Q. 會顯示廣告嗎？</p>
+    <p class="faq-a">A. 不會。本 App 沒有廣告功能。</p>
+
+    <p class="faq-q">Q. 有 Android 版嗎？</p>
+    <p class="faq-a">A. 沒有推出的計畫。本 App 以 Apple 健康（HealthKit）連動為主要功能，因此僅支援 iOS。</p>
+
+    <p class="faq-q">Q. 健康 App 中較舊的資料（例如 2010 年）沒有顯示</p>
+    <p class="faq-a">A. 請試試設定中的「重新同步全部健康資料」。重新讀取全部期間後，可能會取得一般同步遺漏的較舊資料。在本 App 刪除的紀錄，也會在重新同步全部資料時恢復。</p>
+
+    <p class="faq-q">Q. 期間選項中沒有 50年、20年、15年</p>
+    <p class="faq-a">A. 期間選項會依資料的長度顯示：資料達 20 年以上顯示 50年，8 年以上顯示 20年，6 年以上顯示 15年，4 年以上顯示 10年，2 年以上顯示 5年。匯入更多資料後會自動出現。</p>
+
+    <p class="faq-q">Q.「平滑」與「折線」有什麼不同？</p>
+    <p class="faq-a">A. 可在設定的「顯示 → 線條樣式」切換。「平滑」會以曲線（Catmull-Rom 樣條）連接各點，「折線」則以直線連接。</p>
+
+    <p class="faq-q">Q. 同一天有多筆紀錄時會怎麼顯示？</p>
+    <p class="faq-a">A. 可在設定的「顯示 → 每日代表值」選擇使用當天最早、最晚、最高或最低的紀錄（預設為「最晚」）。也可以在「資料 → 依日期查看紀錄」指定某一天要使用的紀錄。當天有手動輸入的資料時，會優先使用手動輸入的資料，而不是來自健康 App 或檔案的資料。</p>
+
+    <h2>使用環境</h2>
+    <ul>
+      <li>iOS 16.0 以上</li>
+      <li>僅限 iPhone（未提供 iPad 專用版面）</li>
+    </ul>
+
+    <h2>問題回報與建議</h2>
+    <p>請寄信到以下電子郵件地址。</p>
+    <div class="card">
+      <p><strong>電子郵件：</strong><a href="mailto:yowl.dev@gmail.com">yowl.dev@gmail.com</a></p>
+    </div>
+    <p>回報時若能附上以下資訊，會很有幫助。</p>
+    <ul>
+      <li>iOS 版本</li>
+      <li>App 版本</li>
+      <li>重現步驟</li>
+    </ul>
+
+    <h2>隱私權政策</h2>
+    <p><a href="./privacy.html#zh-Hant">查看隱私權政策</a></p>
+
+    <h2>免責聲明</h2>
+    <ul>
+      <li>本 App 是個人開發的工具。</li>
+      <li>本 App 顯示的數值並非醫療建議或診斷。關於健康狀況，請諮詢醫師或專家。</li>
+      <li>資料的保存取決於 Apple 健康的 iCloud 同步，以及在本 App 手動輸入的紀錄。重要的資料建議另外備份。</li>
+    </ul>
+  </section>
 
   <footer>
     <p>&copy; 2026 10年体重計</p>
