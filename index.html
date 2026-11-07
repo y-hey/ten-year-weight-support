@@ -81,13 +81,13 @@
   <p class="faq-a">A. 本アプリは Apple ヘルスケアの「読み取り専用ビュアー」として動作します。元データはヘルスケアアプリ・他の体重記録アプリ側に存在し、本アプリの手動入力データのみが本アプリのローカル DB に保存されます。手動入力データのバックアップ機能は今後追加予定です。</p>
 
   <p class="faq-q">Q. 機種変更で引き継ぎたい</p>
-  <p class="faq-a">A. ヘルスケア由来のデータは、新しい iPhone で iCloud のヘルスケア同期が有効なら自動的に引き継がれた後、本アプリで「ヘルスケアと同期」または「ヘルスケア全期間再同期」を実行することで再表示できます。手動入力データは現状端末内ローカル保存のため、引き継ぎ時はインポート機能の追加をお待ちください。</p>
+  <p class="faq-a">A. ヘルスケア由来のデータは、新しい iPhone で iCloud のヘルスケア同期が有効なら自動的に引き継がれた後、本アプリの設定タブで「新しい記録を取り込む」または「全期間を取り込み直す」を実行することで再表示できます。手動入力データは現状端末内ローカル保存のため、引き継ぎ時はインポート機能の追加をお待ちください。</p>
 
   <p class="faq-q">Q. 写真はどこに保存されますか？</p>
   <p class="faq-a">A. 本アプリは写真機能を持ちません。</p>
 
   <p class="faq-q">Q. データを完全に削除したい</p>
-  <p class="faq-a">A. 設定タブの「データ → 手動入力データを全削除」で、手動入力分を一括削除できます。「データ → 日付ごとの記録」では、ヘルスケアやファイル由来の記録も含めて 1 件ずつ削除できます。本アプリで記録を削除しても、ヘルスケアアプリ本体のデータには影響しません。本アプリで削除したヘルスケア由来の記録は、差分同期では戻りませんが、全期間再同期とファイルからの取り込みでは戻ります。アプリをアンインストールすると本アプリ内のローカルキャッシュ・手動入力データはすべて削除されます。</p>
+  <p class="faq-a">A. 記録タブの「手動入力した記録をすべて削除」で、手動入力分を一括削除できます。記録タブの「日付ごとの記録」では、ヘルスケアやファイル由来の記録も含めて 1 件ずつ削除できます。本アプリで記録を削除しても、ヘルスケアアプリ本体のデータには影響しません。本アプリで削除したヘルスケア由来の記録は、差分同期では戻りませんが、全期間再同期とファイルからの取り込みでは戻ります。アプリをアンインストールすると本アプリ内のローカルキャッシュ・手動入力データはすべて削除されます。</p>
 
   <p class="faq-q">Q. 通信は発生しますか？</p>
   <p class="faq-a">A. 発生しません。完全オフラインで動作します。機内モードでも全機能が利用可能です。</p>
@@ -99,16 +99,16 @@
   <p class="faq-a">A. 提供予定はありません。本アプリは Apple ヘルスケア (HealthKit) との連携を主機能としているため、iOS 専用です。</p>
 
   <p class="faq-q">Q. ヘルスケアの古いデータ（2010年など）が反映されません</p>
-  <p class="faq-a">A. 設定タブの「ヘルスケア全期間再同期」をお試しください。差分同期では取りこぼされる古いソースのデータが、全期間の再 fetch で取得できる場合があります。本アプリで削除した記録も、全期間再同期では戻ります。</p>
+  <p class="faq-a">A. 設定タブの「ヘルスケア → 全期間を取り込み直す」をお試しください。差分同期では取りこぼされる古いソースのデータが、全期間の再 fetch で取得できる場合があります。本アプリで削除した記録も、全期間再同期では戻ります。</p>
 
   <p class="faq-q">Q. 期間プリセットに 50年 / 20年 / 15年 が表示されません</p>
   <p class="faq-a">A. データ歴に応じて選択肢を絞っています（50年プリセットはデータ歴 20 年以上、20年は 8 年以上、15年は 6 年以上、10年は 4 年以上、5年は 2 年以上のときに表示されます）。インポートが進むと自動的に表示されます。</p>
 
   <p class="faq-q">Q. グラフが「なめらか」と「カクカク」で違うのはなぜ？</p>
-  <p class="faq-a">A. 設定タブの「表示 → 線のスタイル」で切り替えできます。「なめらか」は隣接点を Catmull-Rom スプラインで補間した曲線描画、「カクカク」は直線で結ぶ表示です。お好みでお選びください。</p>
+  <p class="faq-a">A. 設定タブの「グラフ → 線のスタイル」で切り替えできます。「なめらか」は隣接点を Catmull-Rom スプラインで補間した曲線描画、「カクカク」は直線で結ぶ表示です。お好みでお選びください。</p>
 
   <p class="faq-q">Q. 同じ日に複数記録があるとどう表示されますか？</p>
-  <p class="faq-a">A. 設定タブの「表示 → 1日の代表値」で、その日の最初・最後・最大・最小のどれを使うかを選べます（既定は「最後」）。日付ごとに使う記録は「データ → 日付ごとの記録」で指定できます。同日に手動入力データがある日は、ヘルスケアやファイル由来のデータより手動入力を優先します。</p>
+  <p class="faq-a">A. 設定タブの「グラフ → 1日に何度も測った日に使う値」で、その日の最初・最後・最大・最小のどれを使うかを選べます（既定は「最後」）。日付ごとに使う記録は、記録タブの「日付ごとの記録」で指定できます。同日に手動入力データがある日は、ヘルスケアやファイル由来のデータより手動入力を優先します。</p>
 
   <h2>動作環境</h2>
   <ul>
@@ -159,13 +159,13 @@
     <p class="faq-a">A. The app works as a read-only viewer for Apple Health. Your original data stays in the Health app and other weight apps. Only the records you enter manually are stored in this app's local database. A backup feature for manual records is planned.</p>
 
     <p class="faq-q">Q. I want to move my data to a new iPhone</p>
-    <p class="faq-a">A. If Health data syncs through iCloud on your new iPhone, run "Sync with Health (new only)" or "Resync all Health data" in the app to show it again. Manual records are currently stored only on the device, so they cannot be moved yet. Please wait for an import feature to be added.</p>
+    <p class="faq-a">A. If Health data syncs through iCloud on your new iPhone, run "Import new records" or "Re-import all records" in Settings to show it again. Manual records are currently stored only on the device, so they cannot be moved yet. Please wait for an import feature to be added.</p>
 
     <p class="faq-q">Q. Where are photos stored?</p>
     <p class="faq-a">A. The app has no photo features.</p>
 
     <p class="faq-q">Q. I want to delete my data completely</p>
-    <p class="faq-a">A. In Settings, "Data → Delete all manual records" deletes all manual records at once. In "Data → Records by Date", you can delete records one by one, including those from Health or imported files. Deleting records in this app does not change the data in the Health app. Health records you delete in the app do not come back with a regular sync, but they do come back with "Resync all Health data" or an import from file. Uninstalling the app deletes all of its local data, including manual records.</p>
+    <p class="faq-a">A. In the Records tab, "Delete all manual records" deletes all manual records at once. In "Records by Date" in the Records tab, you can delete records one by one, including those from Health or imported files. Deleting records in this app does not change the data in the Health app. Health records you delete in the app do not come back with a regular sync, but they do come back with "Re-import all records" or an import from file. Uninstalling the app deletes all of its local data, including manual records.</p>
 
     <p class="faq-q">Q. Does the app use the internet?</p>
     <p class="faq-a">A. No. The app works fully offline, and every feature is available in Airplane Mode.</p>
@@ -177,16 +177,16 @@
     <p class="faq-a">A. There are no plans for one. The app is built around Apple Health (HealthKit), so it is iOS only.</p>
 
     <p class="faq-q">Q. Older Health data (such as from 2010) is missing</p>
-    <p class="faq-a">A. Try "Resync all Health data" in Settings. Reading the entire history again may bring in older data that a regular sync misses. Records you deleted in the app also come back with a full resync.</p>
+    <p class="faq-a">A. Try "Health → Re-import all records" in Settings. Reading the entire history again may bring in older data that a regular sync misses. Records you deleted in the app also come back with a full resync.</p>
 
     <p class="faq-q">Q. The 50Y, 20Y, or 15Y period options are not shown</p>
     <p class="faq-a">A. The options depend on how long your data history is: 50Y appears with 20 or more years of data, 20Y with 8 or more, 15Y with 6 or more, 10Y with 4 or more, and 5Y with 2 or more. They appear automatically as more data is imported.</p>
 
     <p class="faq-q">Q. Why does the graph look different with "Smooth" and "Straight"?</p>
-    <p class="faq-a">A. You can switch them in Settings under "Display → Line Style". "Smooth" draws a curve through the points (Catmull-Rom spline), and "Straight" connects them with straight lines.</p>
+    <p class="faq-a">A. You can switch them in Settings under "Graph → Line Style". "Smooth" draws a curve through the points (Catmull-Rom spline), and "Straight" connects them with straight lines.</p>
 
     <p class="faq-q">Q. How are days with several records shown?</p>
-    <p class="faq-a">A. In Settings under "Display → Record Used per Day", choose First, Last, Highest, or Lowest (the default is Last). You can also choose the record for a specific day in "Data → Records by Date". On days with a manual record, the manual record takes priority over data from Health or imported files.</p>
+    <p class="faq-a">A. In Settings under "Graph → Value Used When Weighed Several Times a Day", choose First, Last, Highest, or Lowest (the default is Last). You can also choose the record for a specific day in "Records by Date" in the Records tab. On days with a manual record, the manual record takes priority over data from Health or imported files.</p>
 
     <h2>Requirements</h2>
     <ul>
@@ -238,13 +238,13 @@
     <p class="faq-a">A. 本 App 是 Apple 健康的「唯讀檢視器」。原始資料保存在「健康」App 或其他體重紀錄 App 中，只有在本 App 手動輸入的資料會保存在本 App 的本機資料庫。手動輸入資料的備份功能預計之後加入。</p>
 
     <p class="faq-q">Q. 想在更換 iPhone 時轉移資料</p>
-    <p class="faq-a">A. 若新的 iPhone 已透過 iCloud 同步健康資料，在本 App 執行「與健康 App 同步（僅新資料）」或「重新同步全部健康資料」即可再次顯示。手動輸入的資料目前只保存在裝置中，尚無法轉移，請等待之後加入匯入功能。</p>
+    <p class="faq-a">A. 若新的 iPhone 已透過 iCloud 同步健康資料，在本 App 的設定執行「匯入新紀錄」或「重新匯入全部紀錄」即可再次顯示。手動輸入的資料目前只保存在裝置中，尚無法轉移，請等待之後加入匯入功能。</p>
 
     <p class="faq-q">Q. 照片保存在哪裡？</p>
     <p class="faq-a">A. 本 App 沒有照片功能。</p>
 
     <p class="faq-q">Q. 想完全刪除資料</p>
-    <p class="faq-a">A. 在設定的「資料 → 刪除全部手動輸入資料」可以一次刪除所有手動輸入的資料。在「資料 → 依日期查看紀錄」可以逐筆刪除紀錄，包含來自健康 App 或匯入檔案的紀錄。在本 App 刪除紀錄，不會影響「健康」App 中的資料。在本 App 刪除的健康資料，一般同步時不會再次出現，但執行「重新同步全部健康資料」或從檔案匯入時會恢復。刪除本 App 後，App 內的本機資料與手動輸入資料會全部刪除。</p>
+    <p class="faq-a">A. 在「紀錄」分頁的「刪除全部手動輸入資料」可以一次刪除所有手動輸入的資料。在「紀錄」分頁的「依日期查看紀錄」可以逐筆刪除紀錄，包含來自健康 App 或匯入檔案的紀錄。在本 App 刪除紀錄，不會影響「健康」App 中的資料。在本 App 刪除的健康資料，一般同步時不會再次出現，但執行「重新匯入全部紀錄」或從檔案匯入時會恢復。刪除本 App 後，App 內的本機資料與手動輸入資料會全部刪除。</p>
 
     <p class="faq-q">Q. 會使用網路嗎？</p>
     <p class="faq-a">A. 不會。本 App 完全離線運作，開啟飛航模式時也能使用所有功能。</p>
@@ -256,16 +256,16 @@
     <p class="faq-a">A. 沒有推出的計畫。本 App 以 Apple 健康（HealthKit）連動為主要功能，因此僅支援 iOS。</p>
 
     <p class="faq-q">Q. 健康 App 中較舊的資料（例如 2010 年）沒有顯示</p>
-    <p class="faq-a">A. 請試試設定中的「重新同步全部健康資料」。重新讀取全部期間後，可能會取得一般同步遺漏的較舊資料。在本 App 刪除的紀錄，也會在重新同步全部資料時恢復。</p>
+    <p class="faq-a">A. 請試試設定中的「健康 → 重新匯入全部紀錄」。重新讀取全部期間後，可能會取得一般同步遺漏的較舊資料。在本 App 刪除的紀錄，也會在重新同步全部資料時恢復。</p>
 
     <p class="faq-q">Q. 期間選項中沒有 50年、20年、15年</p>
     <p class="faq-a">A. 期間選項會依資料的長度顯示：資料達 20 年以上顯示 50年，8 年以上顯示 20年，6 年以上顯示 15年，4 年以上顯示 10年，2 年以上顯示 5年。匯入更多資料後會自動出現。</p>
 
     <p class="faq-q">Q.「平滑」與「折線」有什麼不同？</p>
-    <p class="faq-a">A. 可在設定的「顯示 → 線條樣式」切換。「平滑」會以曲線（Catmull-Rom 樣條）連接各點，「折線」則以直線連接。</p>
+    <p class="faq-a">A. 可在設定的「圖表 → 線條樣式」切換。「平滑」會以曲線（Catmull-Rom 樣條）連接各點，「折線」則以直線連接。</p>
 
     <p class="faq-q">Q. 同一天有多筆紀錄時會怎麼顯示？</p>
-    <p class="faq-a">A. 可在設定的「顯示 → 每日代表值」選擇使用當天最早、最晚、最高或最低的紀錄（預設為「最晚」）。也可以在「資料 → 依日期查看紀錄」指定某一天要使用的紀錄。當天有手動輸入的資料時，會優先使用手動輸入的資料，而不是來自健康 App 或檔案的資料。</p>
+    <p class="faq-a">A. 可在設定的「圖表 → 一天量測多次時採用的數值」選擇使用當天最早、最晚、最高或最低的紀錄（預設為「最晚」）。也可以在「紀錄」分頁的「依日期查看紀錄」指定某一天要使用的紀錄。當天有手動輸入的資料時，會優先使用手動輸入的資料，而不是來自健康 App 或檔案的資料。</p>
 
     <h2>使用環境</h2>
     <ul>

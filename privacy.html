@@ -68,7 +68,7 @@
 <main>
   <header>
     <h1>プライバシーポリシー</h1>
-    <p class="meta">アプリ名：10年体重計（TenYearWeight） ／ 最終更新日：2026年10月26日 ／ 提供者：y2</p>
+    <p class="meta">アプリ名：10年体重計（TenYearWeight） ／ 最終更新日：2026年11月7日 ／ 提供者：y2</p>
   </header>
 
   <p class="lang-nav"><a href="#ja">日本語</a><a href="#en">English</a><a href="#zh-Hant">繁體中文</a></p>
@@ -93,6 +93,7 @@
     <li>体重・体脂肪率・BMI・身長の測定値（手動入力分、および Apple ヘルスケアから読み取ったデータのローカルキャッシュ）</li>
     <li>身長設定（BMI 計算用）</li>
     <li>目標体重設定（グラフ表示用）</li>
+    <li>生年月日（設定した場合のみ。グラフに年齢を表示するため）</li>
     <li>表示設定（選択中の期間プリセット・指標タブ・平均窓・線スタイル・1日の代表値・表示言語・体重の単位・日付の基準のタイムゾーンなど）</li>
     <li>本アプリで削除したヘルスケア・ファイル由来の記録の識別子（次の同期で戻さないため）</li>
     <li>Apple ヘルスケアの最終同期時刻（差分同期用のメタ情報）</li>
@@ -134,7 +135,7 @@
   <p>本アプリは Apple ヘルスケア（HealthKit）から、利用者の許可した範囲で体重・体脂肪率・BMI・身長のサンプルを <strong>読み取り専用</strong> で取得し、グラフ表示のために本アプリ内ローカル DB にキャッシュします。</p>
   <ul>
     <li>本アプリからヘルスケアへの<strong>書き込みは一切行いません</strong>。</li>
-    <li>キャッシュは差分同期の都合上、過去サンプルのコピーを保持します。ヘルスケア側でデータを削除した場合、本アプリのキャッシュは「ヘルスケア全期間再同期」を実行することで反映できます。</li>
+    <li>キャッシュは差分同期の都合上、過去サンプルのコピーを保持します。ヘルスケア側でデータを削除した場合、本アプリのキャッシュは設定タブの「全期間を取り込み直す」を実行することで反映できます。</li>
     <li>キャッシュデータがアプリ外（外部サーバー等）へ送信されることはありません。</li>
   </ul>
 
@@ -151,8 +152,8 @@
   <h2>8. データの削除</h2>
   <p>利用者は、以下の方法でアプリ内のデータを削除できます。</p>
   <ul>
-    <li>個別記録の削除：入力タブの履歴（手動入力データ）、または設定タブの「データ → 日付ごとの記録」（すべての記録）から削除</li>
-    <li>手動入力データの一括削除：設定タブの「データ → 手動入力データを全削除」</li>
+    <li>個別記録の削除：記録タブの「最近の手動入力」（手動入力データ）、または記録タブの「日付ごとの記録」（すべての記録）から削除</li>
+    <li>手動入力データの一括削除：記録タブの「手動入力した記録をすべて削除」</li>
     <li>アプリのアンインストール：iOS 標準操作でアプリを削除すると、本アプリ内のローカルキャッシュ・手動入力データはすべて削除されます。Apple ヘルスケア本体のデータには影響しません。</li>
     <li>ヘルスケア側のデータ管理：iOS の「ヘルスケア」アプリの設定 → アプリ → 10年体重計 から、本アプリへの読み取り権限を取り消すことができます。</li>
   </ul>
@@ -171,7 +172,7 @@
 
   <section id="en" class="lang-section" lang="en">
     <h1>Privacy Policy</h1>
-    <p class="meta">App: 10-Year Weight (TenYearWeight) / Last updated: October 26, 2026 / Provider: y2</p>
+    <p class="meta">App: 10-Year Weight (TenYearWeight) / Last updated: November 7, 2026 / Provider: y2</p>
 
     <p>This privacy policy explains how 10-Year Weight ("the app") handles user information.</p>
 
@@ -191,6 +192,7 @@
       <li>Weight, body fat percentage, BMI, and height values (manual records, and a local copy of the data read from Apple Health)</li>
       <li>Height setting (used to calculate BMI)</li>
       <li>Target weight setting (shown on the graph)</li>
+      <li>Birth date (only if you set it; used to show your age on the graph)</li>
       <li>Display settings (selected period, metric tab, averaging window, line style, record used per day, display language, weight unit, time zone used for day boundaries, and so on)</li>
       <li>IDs of records from Health or imported files that you deleted in the app (so that they are not added back at the next sync)</li>
       <li>The time of the last Apple Health sync (used to sync only new records)</li>
@@ -232,7 +234,7 @@
     <p>The app reads weight, body fat percentage, BMI, and height samples from Apple Health (HealthKit) <strong>read-only</strong>, within the scope you allow, and keeps a copy in its local database to show graphs.</p>
     <ul>
       <li>The app <strong>never writes</strong> to Health.</li>
-      <li>To sync only new records, the copy keeps past samples. If you delete data in Health, run "Resync all Health data" to apply the change to the app's copy.</li>
+      <li>To sync only new records, the copy keeps past samples. If you delete data in Health, run "Re-import all records" in Settings to apply the change to the app's copy.</li>
       <li>The copy is never sent outside the app (for example, to an external server).</li>
     </ul>
 
@@ -249,8 +251,8 @@
     <h2>8. Deleting Data</h2>
     <p>You can delete data in the app in the following ways.</p>
     <ul>
-      <li>Delete individual records: from the history in the Input tab (manual records), or from "Data → Records by Date" in the Settings tab (all records)</li>
-      <li>Delete all manual records: "Data → Delete all manual records" in the Settings tab</li>
+      <li>Delete individual records: from "Recent Manual Records" in the Records tab (manual records), or from "Records by Date" in the Records tab (all records)</li>
+      <li>Delete all manual records: "Delete all manual records" in the Records tab</li>
       <li>Uninstall the app: deleting the app in iOS removes all of its local data, including manual records. The data in Apple Health is not affected.</li>
       <li>Managing Health access: in the Health app settings, go to Apps → 10-Year Weight to remove the app's read access.</li>
     </ul>
@@ -270,7 +272,7 @@
 
   <section id="zh-Hant" class="lang-section" lang="zh-Hant">
     <h1>隱私權政策</h1>
-    <p class="meta">App 名稱：10年體重計（TenYearWeight）／ 最後更新日：2026年10月26日 ／ 提供者：y2</p>
+    <p class="meta">App 名稱：10年體重計（TenYearWeight）／ 最後更新日：2026年11月7日 ／ 提供者：y2</p>
 
     <p>本隱私權政策說明 10年體重計（以下稱「本 App」）如何處理使用者資訊。</p>
 
@@ -290,6 +292,7 @@
       <li>體重、體脂肪率、BMI、身高的數值（手動輸入的資料，以及從 Apple 健康讀取的資料在本機的副本）</li>
       <li>身高設定（用於計算 BMI）</li>
       <li>目標體重設定（用於圖表顯示）</li>
+      <li>出生日期（僅在設定時。用於在圖表上顯示歲數）</li>
       <li>顯示設定（選擇中的期間、指標分頁、平均區間、線條樣式、每日代表值、顯示語言、體重單位、判斷日期用的時區等）</li>
       <li>在本 App 刪除的健康 App 或檔案來源紀錄的識別碼（避免下次同步時再次加入）</li>
       <li>Apple 健康的最後同步時間（用於只同步新資料）</li>
@@ -331,7 +334,7 @@
     <p>本 App 會在使用者允許的範圍內，從 Apple 健康（HealthKit）以<strong>唯讀</strong>方式取得體重、體脂肪率、BMI 與身高的樣本，並為了顯示圖表暫存在本 App 的本機資料庫中。</p>
     <ul>
       <li>本 App <strong>完全不會寫入</strong>健康 App。</li>
-      <li>為了只同步新資料，暫存會保留過去樣本的副本。若在健康 App 中刪除了資料，執行「重新同步全部健康資料」即可反映到本 App 的暫存。</li>
+      <li>為了只同步新資料，暫存會保留過去樣本的副本。若在健康 App 中刪除了資料，在設定執行「重新匯入全部紀錄」即可反映到本 App 的暫存。</li>
       <li>暫存資料不會傳送到 App 以外的地方（例如外部伺服器）。</li>
     </ul>
 
@@ -348,8 +351,8 @@
     <h2>8. 刪除資料</h2>
     <p>使用者可以用以下方式刪除 App 內的資料。</p>
     <ul>
-      <li>刪除個別紀錄：從輸入分頁的紀錄（手動輸入的資料），或設定分頁的「資料 → 依日期查看紀錄」（所有紀錄）刪除</li>
-      <li>一次刪除手動輸入的資料：設定分頁的「資料 → 刪除全部手動輸入資料」</li>
+      <li>刪除個別紀錄：從「紀錄」分頁的「最近的手動輸入」（手動輸入的資料），或「紀錄」分頁的「依日期查看紀錄」（所有紀錄）刪除</li>
+      <li>一次刪除手動輸入的資料：「紀錄」分頁的「刪除全部手動輸入資料」</li>
       <li>刪除 App：以 iOS 標準操作刪除 App 後，App 內的本機資料與手動輸入的資料會全部刪除。不會影響 Apple 健康中的資料。</li>
       <li>管理健康 App 的權限：在「健康」App 的設定 → App → 10年體重計，可以取消本 App 的讀取權限。</li>
     </ul>
